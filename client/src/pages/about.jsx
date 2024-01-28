@@ -10,29 +10,31 @@ export const About = () => {
             <div className="hero-content">
               {/* <p>We care to cure your Health</p> */}
 
-              <h1>Why Choose Us? </h1>
+              <h1>Description of this WebSite </h1>
+              <p></p>
               <p>
-                Expertise: Our team consists of experienced IT professionals who
-                are passionate about staying up-to-date with the latest industry
-                trends.
+                In this projects, I've implemented user registration and login
+                functionality with secure password hashing using bcrypt.
               </p>
               <p>
-                Customization: We understand that every business is unique.
-                Thats why we create solutions that are tailored to your specific
-                needs and goals.
+                By incorporating Zod for schema validation, I ensure that user
+                input is validated according to predefined schemas, enhancing
+                data integrity and security. Additionally, I've implemented
+                robust authorization and authentication mechanisms, leveraging
+                JWT (JSON Web Tokens) for secure user authentication and
+                authorization processes.
               </p>
               <p>
-                Customer-Centric Approach: We prioritize your satisfaction and
-                provide top-notch support to address your IT concerns.
+                To enhance security and mitigate potential vulnerabilities, I
+                have implemented CORS (Cross-Origin Resource Sharing) policies
+                to control access to server resources from different origins
               </p>
               <p>
-                Affordability: We offer competitive pricing without compromising
-                on the quality of our services.
-              </p>
-              <p>
-                Reliability: Count on us to be there when you need us. We're
-                committed to ensuring your IT environment is reliable and
-                available 24/7.
+                In summary, my expertise lies in developing secure and scalable
+                MERN stack applications, with a focus on implementing robust
+                authentication and authorization systems, secure password
+                hashing, CORS policies, JWT token management, and thorough input
+                validation.
               </p>
               <div className="btn btn-group">
                 <NavLink to="/contact">

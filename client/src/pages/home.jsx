@@ -5,8 +5,8 @@ export const Home = () => {
         <section className="section-hero">
           <div className="container grid grid-two-cols">
             <div className="hero-content">
-              <p>We are the Idiots</p>
-              <h1>Humans Are Stupids</h1>
+              <p>Following is the </p>
+              <h1>MERN STACK PORTFOLIO WEBPAGE</h1>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
                 facilisi. Cras ut urna eu nunc pharetra tempus ac a felis. Ut id
