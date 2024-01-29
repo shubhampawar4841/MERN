@@ -5,6 +5,7 @@ const connectDB = require("./utils/db");
 const authRoutes = require("./routes/auth-route");
 const contactRoute = require("./routes/contact-route");
 const errorMiddleware = require("./middlewares/error-middleware");
+const path = require("path");
 
 const PORT = process.env.PORT || 5000;
 connectDB();
@@ -32,3 +33,6 @@ app.use("/api", contactRoute);
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
+
+app.use(express.static(path.join(__dirname, "build"))); // put this line of code in app.js
