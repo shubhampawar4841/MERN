@@ -37,8 +37,7 @@ export const Home = () => {
         </section>
       </main>
 
-      {/* 2nd section  */}
-      {/* <Analytics /> */}
+
 
       {/* 3rd section  */}
       <section className="section-hero">

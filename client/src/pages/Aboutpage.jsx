@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 // import { Analytics } from "../components/Analytics";
 
-export const About = () => {
+export const Aboutpage = () => {
   return (
     <>
       <main>
