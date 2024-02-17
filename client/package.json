@@ -1,7 +1,6 @@
 {
   "name": "client",
   "private": true,
-  "proxy": "https://www.shubhampawar4841.com",
   "version": "0.0.0",
   "type": "module",
   "scripts": {

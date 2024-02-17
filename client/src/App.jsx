@@ -1,26 +1,27 @@
+import {Homepage} from "./pages/Homepage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Home } from "./pages/home";
-import { About } from "./pages/About";
-import { Contact } from "./pages/Contact";
-import { Service } from "./pages/service";
-import { Register } from "./pages/register";
-import { Login } from "./pages/login";
+import { Aboutpage } from "./pages/Aboutpage";
+import { Contactpage } from "./pages/Contactpage";
+import { Servicepage } from "./pages/Servicepage";
+import { Registerpage } from "./pages/Registerpage";
+import { Loginpage } from "./pages/Loginpage";
 import { Navbar } from "./components/Navbar";
-import {Error} from "./pages/error";
-import {footer} from "./components/footer"
+// import {Error} from "./pages/Errorpage";
+import {footer} from "./components/footer";
+import { Errorpage } from "./pages/Errorpage";
 
 const App = () => {
   return (
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/service" element={<Service />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="*" element={<Error/>} />
+        <Route path="/" element={<Homepage />} />
+        <Route path="/about" element={<Aboutpage />} />
+        <Route path="/contact" element={<Contactpage />} />
+        <Route path="/service" element={<Servicepage />} />
+        <Route path="/register" element={<Registerpage />} />
+        <Route path="/login" element={<Loginpage />} />
+        <Route path="*" element={<Errorpage/>} />
       </Routes>
       <footer/>
     </Router>

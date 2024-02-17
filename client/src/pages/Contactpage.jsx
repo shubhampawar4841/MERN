@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const Contact = () => {
+export const Contactpage = () => {
   const [contact, setContact] = useState({
     username: "",
     email: "",

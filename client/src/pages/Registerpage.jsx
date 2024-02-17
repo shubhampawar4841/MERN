@@ -1,20 +1,15 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { useAuth } from "../store/auth";
 
-
-export const Login = () => {
+export const Registerpage = () => {
   const [user, setUser] = useState({
     username: "",
+    email: "",
+    phone: "",
     password: "",
   });
 
-  const { saveTokenInLocalStr } = useAuth();
-
-  const navigate = useNavigate();
-
-  // let handle the input field value
   const handleInput = (e) => {
+    console.log(e);
     let name = e.target.name;
     let value = e.target.value;
 
@@ -24,27 +19,31 @@ export const Login = () => {
     });
   };
 
-  // let handle the form submission
+  // handle form on submit
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log(user);
+
     try {
-      const response = await fetch("http://localhost:5000/api/auth/login", {
+      const response = await fetch("http://localhost:5000/api/auth/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(user),
       });
+      console.log("response data : ", response);
 
       if (response.ok) {
         const responseData = await response.json();
-        console.log("after login: ", responseData);
-        // toast.success("Registration Successful");
-        saveTokenInLocalStr(responseData.token);
-        navigate("/");
+        alert("registration successful");
+        setUser({ username: "", email: "", phone: "", password: "" });
+        console.log(responseData);
+      } else {
+        console.log("error inside response ", "error");
       }
     } catch (error) {
-      console.log(error);
+      console.error("Error me ahe erroe", error);
     }
   };
 
@@ -64,9 +63,19 @@ export const Login = () => {
               </div>
               {/* our main registration code  */}
               <div className="registration-form">
-                <h1 className="main-heading mb-3">Login form</h1>
+                <h1 className="main-heading mb-3">registration form</h1>
                 <br />
                 <form onSubmit={handleSubmit}>
+                  <div>
+                    <label htmlFor="username">username</label>
+                    <input
+                      type="text"
+                      name="username"
+                      value={user.username}
+                      onChange={handleInput}
+                      placeholder="username"
+                    />
+                  </div>
                   <div>
                     <label htmlFor="email">email</label>
                     <input
@@ -77,7 +86,15 @@ export const Login = () => {
                       placeholder="email"
                     />
                   </div>
-
+                  <div>
+                    <label htmlFor="phone">phone</label>
+                    <input
+                      type="number"
+                      name="phone"
+                      value={user.phone}
+                      onChange={handleInput}
+                    />
+                  </div>
                   <div>
                     <label htmlFor="password">password</label>
                     <input
@@ -90,7 +107,7 @@ export const Login = () => {
                   </div>
                   <br />
                   <button type="submit" className="btn btn-submit">
-                    Login
+                    Register Now
                   </button>
                 </form>
               </div>
